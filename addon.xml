@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <addon id="script.alexa.helper" name="Alexa Helper" version="0.0.1" provider-name="jingai">
+  <requires>
+    <import addon="xbmc.python" version="2.24.0"/>
+    <import addon="xbmc.addon" version="12.0.0"/>
+  </requires>
+
+  <extension point="xbmc.python.script" library="plugin.py">
+    <provides>video audio</provides>
+  </extension>
+
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en">Helper for the Kodi-Alexa Amazon Alexa skill</summary>
+    <summary lang="en_US">Helper for the Kodi-Alexa Amazon Alexa skill</summary>
+    <description lang="en">Speeds up library searches from the Kodi-Alexa Amazon Alexa skill.</description>
+    <description lang="en_US">Speeds up library searches for the Kodi-Alexa Amazon Alexa skill.</description>
+    <language></language>
+    <license>MIT</license>
+    <forum>https://forum.kodi.tv/showthread.php?tid=254502</forum>
+    <website></website>
+    <source>https://github.com/jingai/script.alexa.helper</source>
+  </extension>
+</addon>

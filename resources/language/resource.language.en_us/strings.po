@@ -1,0 +1,6 @@
+# Kodi language file
+# Addon Name: Alexa Helper
+# Addon id: script.alexa.helper
+# Addon Provider: jingai
+msgid ""
+msgstr ""
