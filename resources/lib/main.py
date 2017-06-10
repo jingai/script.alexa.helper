@@ -172,6 +172,8 @@ def matchHeard(heard, results, lookingFor='label'):
       try:
         if f is not None:
           ms = f(heard_lower, KODI_LANGUAGE)
+          # no need to bother fuzzy matching if the string didn't change
+          if ms == heard_lower: continue
           mf = f.__name__
         else:
           ms = heard_lower
