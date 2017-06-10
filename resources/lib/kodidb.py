@@ -61,3 +61,13 @@ class KodiDb:
     if 'result' in songs and 'songs' in songs['result']:
       return songs['result']['songs']
     return None
+
+  def addons(self):
+    all_addons = []
+    for addon_type in ['video', 'audio', 'image', 'executable']:
+      addons = self.SendCommand('Addons.GetAddons', {"content":addon_type, "properties":["name"]})
+      if 'result' in addons and 'addons' in addons['result']:
+        all_addons += addons['result']['addons']
+    if len(all_addons) > 0:
+      return all_addons
+    return None
