@@ -12,7 +12,10 @@ class Songs(object):
 
   def search(self):
     '''search for songs that match a given string'''
-    all_items = self.kodidb.songs()
+    if 'artistid' in self.options:
+      all_items = self.kodidb.songs(self.options['artistid'])
+    else:
+      all_items = self.kodidb.songs()
     return process_method_on_list(self.process_song, all_items)
 
   def process_song(self, item):

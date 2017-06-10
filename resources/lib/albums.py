@@ -12,7 +12,10 @@ class Albums(object):
 
   def search(self):
     '''search for albums that match a given string'''
-    all_items = self.kodidb.albums()
+    if 'artistid' in self.options:
+      all_items = self.kodidb.albums(self.options['artistid'])
+    else:
+      all_items = self.kodidb.albums()
     return process_method_on_list(self.process_album, all_items)
 
   def process_album(self, item):

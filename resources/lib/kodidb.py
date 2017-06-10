@@ -50,14 +50,20 @@ class KodiDb:
       return artists['result']['artists']
     return None
 
-  def albums(self):
-    albums = self.SendCommand('AudioLibrary.GetAlbums')
+  def albums(self, artist_id=None):
+    if artist_id:
+      albums = self.SendCommand('AudioLibrary.GetAlbums', {"filter": {"artistid": int(artist_id)}})
+    else:
+      albums = self.SendCommand('AudioLibrary.GetAlbums')
     if 'result' in albums and 'albums' in albums['result']:
       return albums['result']['albums']
     return None
 
-  def songs(self):
-    songs = self.SendCommand('AudioLibrary.GetSongs')
+  def songs(self, artist_id=None):
+    if artist_id:
+      songs = self.SendCommand('AudioLibrary.GetSongs', {"filter": {"artistid": int(artist_id)}})
+    else:
+      songs = self.SendCommand('AudioLibrary.GetSongs')
     if 'result' in songs and 'songs' in songs['result']:
       return songs['result']['songs']
     return None
