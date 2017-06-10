@@ -62,6 +62,12 @@ class KodiDb:
       return songs['result']['songs']
     return None
 
+  def genres(self, media_type):
+    genres = self.SendCommand('VideoLibrary.GetGenres', {"type":media_type})
+    if 'result' in genres and 'genres' in genres['result']:
+      return genres['result']['genres']
+    return None
+
   def addons(self):
     all_addons = []
     for addon_type in ['video', 'audio', 'image', 'executable']:
