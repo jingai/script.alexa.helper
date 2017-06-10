@@ -1,0 +1,14 @@
+0.0.3 - 20170610
+- Only fuzzy match with word conv functions if they modify the string.
+
+0.0.2 - 20170609
+- Allow specifying artist ID for album/song queries.
+- Add KodiDb.moviegenres().
+- Add KodiDb.addons().
+- Update num2words.
+- Add fanart and icon.
+- Add README (unfinished).
+- Add LICENSE.
+
+0.0.1 - 20170609
+- Initial release.
